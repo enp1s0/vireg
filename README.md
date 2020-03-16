@@ -12,12 +12,15 @@ make
 ```
 
 2. Set environment variable
+
 Append a path to `vireg` to `$PATH`
 
 3. (Optional) Set the path to `.viminfo`
 ```bash
 export VIREG_VIMINFOPATH=/path/to/.viminfo
 ```
+
+Default path is `$HOME/.viminfo`
 
 ## Usage
 - You can get the contents of noname register with
@@ -31,3 +34,7 @@ vireg
 vireg X
 ```
 .
+
+## License
+
+MIT
