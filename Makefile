@@ -1,10 +1,11 @@
 CXX = g++
 CXXFLAGS = -std=c++11
+SRCDIR=src
 TARGET = vreg
 
 
 
-$(TARGET): main.cpp
+$(TARGET): $(SRCDIR)/main.cpp
 	$(CXX) $< $(CXXFLAGS) -o $@
 
 clean:
