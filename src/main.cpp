@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
 
 	// Make a file path to .viminfo
 	std::string viminfo_path = std::string(getenv("HOME")) + "/.viminfo";
-	const char* env_ptr = getenv("VREG_VIMINFOPATH");
+	const char* env_ptr = getenv("VIREG_VIMINFOPATH");
 	if (env_ptr) {
 		viminfo_path = env_ptr;
 	}
