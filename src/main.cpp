@@ -16,8 +16,19 @@ int main(int argc, char **argv) {
 		viminfo_path = env_ptr;
 	}
 
-	std::cerr << viminfo_path << std::endl;
-
 	// Load viminfo
 	std::ifstream ifs(viminfo_path);
+
+	std::string buffer;
+	while (std::getline(ifs, buffer)) {
+		if ((buffer.length() >= 2 && buffer.data()[0] == '"' && buffer.data()[1] == target_reg) ||
+			(buffer.length() >= 3 && buffer.data()[0] == '"' && buffer.data()[1] == '"' && buffer.data()[2] == target_reg)) {
+			while (std::getline(ifs, buffer)) {
+				if (buffer.length() >= 1 && buffer.data()[0] == '|') {
+					break;
+				}
+				std::printf("%s\n", buffer.substr(1).c_str());
+			}
+		}
+	}
 }
