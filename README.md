@@ -4,16 +4,14 @@ Output contents in a register of vim to stdout.
 This program reads `.viminfo` to get the contents of registers.
 
 ## Installation
-1. Clone and build
+1. Clone and build vireg
 ```bash
 git clone https://github.com/enp1s0/vireg
 cd vreg
 make
 ```
 
-2. Set environment variable
-
-Append a path to `vireg` to `$PATH`
+2. Append a path to `vireg` to `$PATH`
 
 3. (Optional) Set the path to `.viminfo`
 ```bash
