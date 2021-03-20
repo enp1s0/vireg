@@ -7,11 +7,11 @@ This program reads `.viminfo` to get the contents of registers.
 1. Clone and build vireg
 ```bash
 git clone https://github.com/enp1s0/vireg
-cd vreg
+cd vireg
 make
 ```
 
-2. Append a path to `vireg` to `$PATH`
+2. Append a path to `vireg/bin` to `$PATH`
 
 3. (Optional) Set the path to `.viminfo`
 ```bash
