@@ -1,9 +1,11 @@
-CXX = g++
-CXXFLAGS = -std=c++11
+CXX=g++
+CXXFLAGS=-std=c++11
 SRCDIR=src
-TARGET = vireg
+BINDIR=bin
+TARGET=vireg
 
-$(TARGET): $(SRCDIR)/main.cpp
+$(BINDIR)/$(TARGET): $(SRCDIR)/main.cpp
+	[ -d "${BINDIR}" ] || mkdir ${BINDIR}
 	$(CXX) $< $(CXXFLAGS) -o $@
 
 clean:
